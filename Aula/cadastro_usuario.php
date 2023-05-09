@@ -19,4 +19,9 @@
         echo "Erro ao tentar cadastrar!";
     }
 
+    echo
+    "<div>
+    <a href='index.php'>Voltar</a>
+    </div>"; 
+
 ?>
