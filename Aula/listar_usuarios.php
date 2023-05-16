@@ -22,6 +22,7 @@
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
+            <th>Senha</th>
             <th>Alterar</th>
             <th>Excluir</th>
         </tr>
@@ -32,6 +33,7 @@
             echo "<td>". $row['nome_usuario'] ."</td>";
             echo "<td>". $row['email_usuario'] ."</td>";
             echo "<td>". $row['fone_usuario'] ."</td>";
+            echo "<td>". $row['senha'] ."</td>";
             echo "<td><a href='altera_usuario.php?id_usuario=" .$row['id_usuario']. "'>Alterar</a></td>";
             echo "<td><a href='excluir_usuario.php?id_usuario=" .$row['id_usuario']. "'>Excluir</a></td>";  
             echo "</tr>";
