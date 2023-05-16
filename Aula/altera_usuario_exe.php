@@ -6,13 +6,7 @@
     $email = $_POST['email'];
     $fone = $_POST['fone'];
     $senha = $_POST['senha'];
-
-    echo "$id<br>";
-    echo "$nome<br>";
-    echo "$email<br>";
-    echo "$fone<br>";
-    echo "$senha<br>";
-
+    
     $sql = "UPDATE usuario SET nome_usuario= '$nome', email_usuario='$email', fone_usuario='$fone', senha='$senha' WHERE id_usuario = '$id'";
     $result = mysqli_query($con, $sql);
     

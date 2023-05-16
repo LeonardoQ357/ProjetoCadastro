@@ -12,16 +12,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <ti tle>Document</title>
+    <title>Document</title>
 </head>
 <body>
     <h1>Alteração de usuários - IFSP</h1>
     <form action="altera_usuario_exe.php" method="post">
-        <div>
-            <label for="id">ID</label>
-
-            <input type="text" name="id_usuario" id="id_usuario" value="<?php echo $row['id_usuario']?>" readonly>
-        </div>
+            <input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $row['id_usuario']?>" readonly>
         <div>
             <label for="nome">Nome</label>
 
