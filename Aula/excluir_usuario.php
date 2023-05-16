@@ -9,7 +9,7 @@
     if($result){
         echo "<br><h2>Dados excluidos com sucesso!!</h2>";
     }else{
-        echo "<br><h2>Erro ao tentar excluir dados: $mysqli_error($con)";
+        echo "<br><h2>Erro ao tentar excluir dados: $mysqli_erro($con)";
     }
 
     echo
