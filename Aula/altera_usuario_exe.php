@@ -18,8 +18,9 @@
     if($result){
         echo "<br><h2>Dados alterados com sucesso!!</h2>";
     }else{
-        echo "<br><h2>Algo deu errado!!</h2>";
+        echo "<br>Erro ao tentar alterar dados: $mysqli_error($con)";
     }
+    
 
     echo
     "<div>
