@@ -20,7 +20,7 @@
         <div>
             <label for="id">ID</label>
 
-            <input type="text" name="nome" id="nome" value="<?php echo $row['id_usuario']?>" disabled>
+            <input type="text" name="id_usuario" id="id_usuario" value="<?php echo $row['id_usuario']?>" readonly>
         </div>
         <div>
             <label for="nome">Nome</label>

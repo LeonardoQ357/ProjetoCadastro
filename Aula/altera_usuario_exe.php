@@ -7,5 +7,24 @@
     $fone = $_POST['fone'];
     $senha = $_POST['senha'];
 
-    $sql = "UPDATE usuario SET nome_usuario= '$nome', email_usuario='$email', fone_usuaio='$fone', senha='$senha' WHERE id_usuario = '$id'";
+    echo "$id<br>";
+    echo "$nome<br>";
+    echo "$email<br>";
+    echo "$fone<br>";
+    echo "$senha<br>";
+
+    $sql = "UPDATE usuario SET nome_usuario= '$nome', email_usuario='$email', fone_usuario='$fone', senha='$senha' WHERE id_usuario = '$id'";
+    $result = mysqli_query($con, $sql);
+    
+    if($result){
+        echo "<br><h2>Dados alterados com sucesso!!</h2>";
+    }else{
+        echo "<br><h2>Algo deu errado!!</h2>";
+    }
+
+    echo
+    "<div>
+    <a href='listar_usuarios.php'>Voltar</a>
+    </div>"; 
+
 ?>
