@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Página Inicial - Projeto Cadastro IFSP</h3>
+    <h1>Página Inicial - Projeto Cadastro IFSP</h1>
     <?php
         if(!empty($_SESSION['login'])){
             echo "<h4>Olá " .$_SESSION['login']['nome_usuario']. "</h4>";
