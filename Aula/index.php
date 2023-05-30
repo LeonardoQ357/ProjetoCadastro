@@ -2,7 +2,6 @@
         include('conexao.php');
         include('cria_sessao.php');
 
-        $sql = "SELECT * FROM usuario WHERE "
     ?>
 
 <!DOCTYPE html>
@@ -17,6 +16,10 @@
     <h1>Página Inicial - Projeto Cadastro IFSP</h1>
     <?php
         if(!empty($_SESSION['login'])){
+            echo "
+            <div>
+            <img src ='" . $_SESSION['login']['foto'] . "'>
+            </div>";
             echo "<h4>Olá " .$_SESSION['login']['nome_usuario']. "</h4>";
             echo "<a href='logout.php'>Sair</a>";
         }else{

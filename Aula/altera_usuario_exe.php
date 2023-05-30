@@ -1,6 +1,14 @@
 <?php
     include("conexao.php");
 
+    $nome_foto = "";
+    if(file_exists($_FILES['foto']['tmp_name'])){
+        $pasta_destino = 'fotos/';
+        $extensao = strtolower(substr($_FILES['foto']['name'], -4));
+        $nome_foto = $pasta_destino . date("Ymd-His") . $extensao;
+        move_uploaded_file($_FILES['foto']['tmp_name'], $nome_foto);
+    }
+
     $id = $_POST['id_usuario'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -11,7 +19,8 @@
     nome_usuario= '$nome', 
     email_usuario='$email', 
     fone_usuario='$fone', 
-    senha='$senha' 
+    senha='$senha',
+    foto='$nome_foto'
     WHERE id_usuario = '$id'";
     $result = mysqli_query($con, $sql);
     
