@@ -1,5 +1,14 @@
 <?php
     include("conexao.php");
+    //Upload foto
+    $nome_foto = "";
+    if(file_exists($_FILES['foto']['tmp_name'])){
+        $pasta_destino = 'fotos/';
+        $extensao = strtolower(substr($_FILES['foto']['name'], -4));
+        $nome_foto = $pasta_destino . date("Ymd-His") . $extensao;
+        move_uploaded_file($_FILES['foto']['tmp_name'], $nome_foto);
+    }
+    //Fim upload
 
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -17,7 +26,7 @@
         <a href='cadastro_usuario.html'>Voltar</a>
         </div>"; 
     }if(mysqli_num_rows($resulta) == 0){
-        $sql = "INSERT INTO usuario (nome_usuario, email_usuario, fone_usuario, senha) VALUES ('".$nome."','".$email."','".$fone."','".$senha."')";
+        $sql = "INSERT INTO usuario (nome_usuario, email_usuario, fone_usuario, senha, foto) VALUES ('".$nome."','".$email."','".$fone."','".$senha."', '".$nome_foto."')";
 
         echo $sql."<br>";
 
